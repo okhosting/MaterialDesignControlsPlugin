@@ -1,16 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\..\example\packages\Xamarin.Forms.4.4.0.991864\build\Xamarin.Forms.props" Condition="Exists('..\..\example\packages\Xamarin.Forms.4.4.0.991864\build\Xamarin.Forms.props')" />
-  <Import Project="..\packages\Xamarin.Forms.3.0.0.446417\build\netstandard2.0\Xamarin.Forms.props" Condition="Exists('..\packages\Xamarin.Forms.3.0.0.446417\build\netstandard2.0\Xamarin.Forms.props')" />
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2BFC48FE-5BE1-4482-8469-77DDA82D13C8}</ProjectGuid>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{668D7959-00EC-41F4-9489-938ABE00318A}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{a52b8a63-bc84-4b47-910d-692533484892}</TemplateGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Plugin.MaterialDesignControls.iOS</RootNamespace>
-    <AssemblyName>Plugin.MaterialDesignControls.iOS</AssemblyName>
+    <RootNamespace>MaterialDesignControls.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>MaterialDesignControls.iOS</AssemblyName>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -20,78 +22,45 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchDebug>true</MtouchDebug>
-    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
-    <MtouchFastDev>true</MtouchFastDev>
-    <MtouchProfiling>true</MtouchProfiling>
-    <IOSDebuggerPort>49191</IOSDebuggerPort>
-    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
-    <DeviceSpecificBuild>false</DeviceSpecificBuild>
-    <MtouchVerbosity></MtouchVerbosity>
-    <MtouchLink></MtouchLink>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
-    <DefineConstants></DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\Plugin.MaterialDesignControls.iOS.xml</DocumentationFile>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
-    <MtouchLink>SdkOnly</MtouchLink>
-    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
-    <MtouchVerbosity></MtouchVerbosity>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
-    <Reference Include="Xamarin.Forms.Core">
-      <HintPath>..\..\example\packages\Xamarin.Forms.4.4.0.991864\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Platform">
-      <HintPath>..\..\example\packages\Xamarin.Forms.4.4.0.991864\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Platform.iOS">
-      <HintPath>..\..\example\packages\Xamarin.Forms.4.4.0.991864\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Xaml">
-      <HintPath>..\..\example\packages\Xamarin.Forms.4.4.0.991864\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
-    </Reference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Resources\" />
-    <Folder Include="Renderers\" />
-    <Folder Include="Effects\" />
-    <Folder Include="Utils\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Renderers\MaterialDatePickerRenderer.cs" />
-    <Compile Include="Renderers\MaterialEntryRenderer.cs" />
-    <Compile Include="Renderers\MaterialPickerRenderer.cs" />
-    <Compile Include="Renderers.cs" />
-    <Compile Include="Renderers\MaterialTimePickerRenderer.cs" />
-    <Compile Include="Renderers\MaterialEditorRenderer.cs" />
-    <Compile Include="Renderers\MaterialLabelRenderer.cs" />
-    <Compile Include="Effects\TouchAndPressEffect.cs" />
     <Compile Include="Effects.cs" />
-    <Compile Include="Utils\TextAlignmentHelper.cs" />
+    <Compile Include="Effects\TouchAndPressEffect.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderers.cs" />
+    <Compile Include="Renderers\MaterialDatePickerRenderer.cs" />
     <Compile Include="Renderers\MaterialDoublePickerRenderer.cs" />
+    <Compile Include="Renderers\MaterialEditorRenderer.cs" />
+    <Compile Include="Renderers\MaterialEntryRenderer.cs" />
+    <Compile Include="Renderers\MaterialLabelRenderer.cs" />
+    <Compile Include="Renderers\MaterialPickerRenderer.cs" />
+    <Compile Include="Renderers\MaterialTimePickerRenderer.cs" />
+    <Compile Include="Utils\TextAlignmentHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms">
+      <Version>4.7.0.1239</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MaterialDesignControls\MaterialDesignControls.csproj">
-      <Project>{2DD667DD-DC54-4CA6-B167-B0B4C1CE72D2}</Project>
+      <Project>{c0615cc3-c56b-4a84-aaa8-350c3277a6e0}</Project>
       <Name>MaterialDesignControls</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-  <Import Project="..\packages\Xamarin.Forms.3.0.0.446417\build\netstandard2.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.3.0.0.446417\build\netstandard2.0\Xamarin.Forms.targets')" />
-  <Import Project="..\..\example\packages\Xamarin.Forms.4.4.0.991864\build\Xamarin.Forms.targets" Condition="Exists('..\..\example\packages\Xamarin.Forms.4.4.0.991864\build\Xamarin.Forms.targets')" />
 </Project>
