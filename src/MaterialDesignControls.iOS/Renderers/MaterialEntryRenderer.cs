@@ -11,7 +11,7 @@ namespace Plugin.MaterialDesignControls.iOS
 {
     public class MaterialEntryRenderer : EntryRenderer
     {
-        public static void Init() { }
+       public static void Init() { }
 
         protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
         {

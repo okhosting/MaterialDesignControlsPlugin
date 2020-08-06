@@ -370,13 +370,14 @@ namespace Plugin.MaterialDesignControls
                         case FieldTypes.Filled:
                             this.frmContainer.BackgroundColor = this.BackgroundColor;
                             this.frmContainer.BorderColor = this.BorderColor;
-                            this.frmContainer.CornerRadius = 20;
+                            this.frmContainer.CornerRadius = 0;
                             this.bxvLine.IsVisible = false;
+                            this.pckDate.BackgroundColor = Color.Transparent;
                             break;
                         case FieldTypes.Outlined:
                             this.frmContainer.BackgroundColor = this.BackgroundColor;
                             this.frmContainer.BorderColor = this.BorderColor;
-                            this.frmContainer.CornerRadius = 4;
+                            this.frmContainer.CornerRadius = 0;
                             this.bxvLine.IsVisible = false;
                             break;
                         case FieldTypes.Lined:
@@ -472,7 +473,7 @@ namespace Plugin.MaterialDesignControls
             {
                 case FieldTypes.Filled:
                 case FieldTypes.Outlined:
-                    this.frmContainer.BorderColor = this.FocusedBorderColor;
+                    this.frmContainer.BorderColor = Color.FromRgba(7, 161, 197, 255);
                     break;
                 case FieldTypes.Lined:
                     this.bxvLine.Color = this.FocusedBorderColor;
