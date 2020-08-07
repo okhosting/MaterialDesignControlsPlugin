@@ -561,7 +561,7 @@ namespace Plugin.MaterialDesignControls
             {
                 case FieldTypes.Filled:
                 case FieldTypes.Outlined:
-                    this.frmContainer.BorderColor = this.FocusedBorderColor;
+                    this.frmContainer.BorderColor = Color.FromRgba(7, 161, 197, 255);
                     break;
                 case FieldTypes.Lined:
                     this.bxvLine.Color = this.FocusedBorderColor;
